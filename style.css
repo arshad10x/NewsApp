@@ -1,62 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
 
-*{
-    margin: 0;
+* {
     padding: 0;
-    
+    margin: 0;
+    box-sizing: border-box;
 }
 
-:root{
+:root {
     --primary-text-color: #183b56;
     --secondary-text-color: #577592;
     --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
 }
 
-body{
+body {
     font-family: "Poppins", sans-serif;
     color: var(--primary-text-color);
 }
 
-p{
+p {
     font-family: "Roboto", sans-serif;
     color: var(--secondary-text-color);
-    line-height: 1.4em;
+    line-height: 1.4rem;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
 }
 
-.container{
+.container {
     max-width: 1180px;
-    margin-inline:auto;
+    margin-inline: auto;
     overflow: hidden;
 }
 
-nav{
+nav {
     background-color: #f3faff;
     box-shadow: 0 0 4px #bbd0e2;
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 99;
     left: 0;
     right: 0;
+    /* padding: 0px 5px; */
 }
 
-.main-nav{
+.main-nav {
     justify-content: space-between;
     padding-block: 8px;
 }
 
-.logo img{
-    width: 120px;
+.logo img {
+    width: 70px;
+}
+
+.nav-links ul {
+    gap: 16px;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active{
+    color: lightblue;
+}
+
+.search-bar{
+    height: 32px;
+    gap:8px;
+}
+
+.news-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border:2px solid #bbd0e2;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+    color:var(--secondary-text-color);
+}
+
+
+.search-button{
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 8px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover{
+    background-color: var(--accent-color-dark);
 }
