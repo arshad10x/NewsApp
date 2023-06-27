@@ -17,13 +17,13 @@ main{
     cursor: pointer;
     background-color: #fff;
     overflow: hidden;
+    transition: all .3s ease;
 }
 
 .card:hover{
     box-shadow: 1px 1px 8px #e2eef9;
     background-color: #f9fdff;
     transform: translateY(-2px);
-    transition: all .3s ease;
 }
 
 .card-header img{
@@ -32,7 +32,7 @@ main{
     object-fit: cover;
 }
 
-.card-body{
+.card-content{
     padding: 12px;
 }
 
