@@ -19,6 +19,27 @@ function bindData(articles) {
 
     cardsContainer.innerHTML = "";
 
+    if (articles.length === 0) {
+        const searchQuery = document.getElementById("search-text").value;
+        const noResultMsg = document.createElement("h3");
+        noResultMsg.innerHTML = `Sorry, there are no results for <u>${searchQuery}</u>`;
+        
+    
+        const suggestionsMsg = document.createElement("p");
+        suggestionsMsg.innerHTML = `<br><b>Suggestions:</b><br>
+          - Make sure that all words are spelled correctly.<br>
+          - Try different keywords.<br>
+          - Try more general keywords.`;
+    
+        // Append both messages to a container element
+        const messagesContainer = document.createElement("div");
+        messagesContainer.appendChild(noResultMsg);
+        messagesContainer.appendChild(suggestionsMsg);
+    
+        cardsContainer.appendChild(messagesContainer);
+        return;
+      }
+
     articles.forEach((article) => {
         if (!article.urlToImage) return;
         const cardClone = newsCardTemplate.content.cloneNode(true);
@@ -69,7 +90,7 @@ searchButton.addEventListener('click',()=>{
       }
     fetchNews(query);
     currentSelectedNav=null;
-});
+})
 
 
   
