@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News App</title>
-   <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">>
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/format.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/card.css">
@@ -15,13 +15,16 @@
     <nav>
         <div class="main-nav container flex">
             <a href="#" onclick="reload()" class="logo">
-                <img src="./assets/logo.png" alt="logo">
+                <img src="./assets/news.png" alt="logo">
             </a>
             <div class="nav-links">
                 <ul class="flex">
-                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="news" onclick="onNavItemClick('news')">News</li>
+                    <li class="hover-link nav-item" id="sport" onclick="onNavItemClick('sport')">Sport</li>
                     <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
                     <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="travel" onclick="onNavItemClick('travel')">Travel</li>
+                    <li class="hover-link nav-item" id="future" onclick="onNavItemClick('future')">Future</li>
                 </ul>
             </div>
             <div class="search-bar flex">

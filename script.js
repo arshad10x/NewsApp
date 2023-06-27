@@ -41,6 +41,35 @@ function fillDataInCard(cardClone, article) {
         timeZone:"Asia/Jakarta"
     });
 
-    newsSource.innerHTML= `${article.source.name}• ${date}`
+    newsSource.innerHTML= `${article.source.name}• ${date}`;
+
+    cardClone.firstElementChild.addEventListener('click',()=>{
+        window.open(article.url,"_blank");
+    })
 
 }
+
+let currentSelectedNav =null;
+function onNavItemClick(id){
+    fetchNews(id);
+    const navItem= document.getElementById(id);
+    currentSelectedNav?.classList.remove('active');
+    currentSelectedNav=navItem;
+    currentSelectedNav.classList.add('active');
+}
+
+const searchButton=document.getElementById('search-button');
+const searchText = document.getElementById('search-text');
+
+searchButton.addEventListener('click',()=>{
+    const query = searchText.value.trim();
+    if (!query) {
+        alert("Please enter a search term.");
+        return;
+      }
+    fetchNews(query);
+    currentSelectedNav=null;
+});
+
+
+  

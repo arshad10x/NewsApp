@@ -43,7 +43,7 @@ nav {
 }
 
 .nav-links ul {
-    gap: 16px;
+    gap: 50px;
 }
 
 .hover-link {
@@ -56,6 +56,10 @@ nav {
 
 .hover-link:active{
     color: lightblue;
+}
+
+.nav-item.active{
+    color: var(--accent-color);
 }
 
 .search-bar{
